@@ -1,70 +1,97 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfolio Website
 
-## Available Scripts
+An interactive and fully responsive portfolio website showcasing the skills, projects, and achievements of Satynarayan Maurya, a B.Tech student and passionate full-stack web developer specializing in the MERN stack.
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Hero Section: Introduction with a personal tagline and professional summary.
+- About Me: Insight into my educational background and development journey.
+- Skills: Highlights of technical expertise, including tools and technologies.
+- Education: Academic qualifications and timeline.
+- Projects: Detailed description of notable projects with live links and source code.
+- Navigation: Smooth scrolling with fixed navigation bar and mobile responsiveness.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Used
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-  HTML5, CSS3, JavaScript
+- React.js with Tailwind CSS for UI/UX
+- Framer Motion for animations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+├── public        # Public assets like images, icons, etc.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+├── src             # Source code
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+       ├── components  # Reusable components
+       ├── pages       # Individual pages of the portfolio
+       ├── App.js      # Main app structure
+       └── index.js    # React entry point
+└── README.md       # Documentation
+## Projects
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Study Notion ( E-Learning Platform )
 
-## Learn More
+A feature-rich e-learning platform with functionalities for students and instructors.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Key Features:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Razorpay integration for payments.
+- Secure OTP-based authentication.
+- Course management system for instructors.
+- Enrolled courses section for students.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Shop Next ( E-Commence Platform )
 
-### Analyzing the Bundle Size
+An intuitive e-commerce platform for seamless shopping experiences.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Key Features:
 
-### Making a Progressive Web App
+- User-friendly UI for browsing and purchasing products.
+- Email OTP-based signup and login.
+- Admin dashboard for product and order management.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+3. Frame Hub ( Social Media Platform )
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+A social media platform for sharing posts and reels with interactive features.
 
-### Deployment
+-  User Features::
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Sign up, log in, and explore content from other users.
+- Like, comment, and follow other profiles.
+- View and edit own profile, post and share reels/photos
+- Scroll through an engaging feed of posts and reels.
 
-### `npm run build` fails to minify
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Navigate through different sections using the menu.
+- View details of my projects in the "Projects" section.
+- Connect with me through the links provided in the "About" section.
+## 🔗 Links
+
+
+
+[![dxgfdg](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/satynarayan-maurya-114335246/)
+
+
+[![Github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://github.com/SatynarayanMaurya)
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
