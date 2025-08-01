@@ -8,6 +8,11 @@ import useIntersectionObserver  from "./Components/useIntersectionObserver"
 import heroImage from "./Components/hero-3.svg"
 import { RiMenuFill } from "react-icons/ri";
 import { useState } from "react";
+import Projects from "./Components/Projects";
+import profileImage from "./Assests/profile image.jpg"
+import Experience from "./Components/Experience";
+import Footer from "./Components/Footer";
+import { IoLogoInstagram } from "react-icons/io5";
 document.addEventListener("DOMContentLoaded", function() {
   let animateElements = document.querySelectorAll('.animate');
 
@@ -53,10 +58,10 @@ function App() {
     <div className="relative">
 
       {/* Navbar  */}
-      <div className='h-[60px]  w-screen bg-[#3B1E54] text-white flex items-center justify-between lg:px-12 px-4 fixed inset-0'>
+      <div className='h-[60px]  w-screen  bg-[#3B1E54] text-white flex items-center justify-between lg:px-12 px-4 fixed inset-0 z-50'>
         
             <div>
-                <p className='lg:font-semibold lg:text-3xl text-2xl lg:-ml-4'>Satynarayan Maurya</p>
+                <p className='lg:font-semibold  text-2xl lg:-ml-4'>Satynarayan Maurya</p>
             </div>
 
             <div className="block_hide_element">
@@ -69,9 +74,10 @@ function App() {
                   <div className="absolute top-12 right-0 bg-[#3B1E54] px-3 py-3 rounded-lg">
                  
                     <div  className='flex flex-col gap-2 justify-between   text-lg font-semibold'>
-                      <button  onClick={() => handleScroll("home")} class="px-4 py-1 bg-white text-black rounded-lg font-bold">Home</button>
+                      <button  onClick={() => handleScroll("home")} className="px-4 py-1 bg-white text-black rounded-lg font-bold">Home</button>
                       <button onClick={() => handleScroll("about")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>About</button>
                       <button onClick={() => handleScroll("skills")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Skills</button>
+                      <button onClick={() => handleScroll("experience")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Experience</button>
                       <button onClick={() => handleScroll("education")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Education</button>
                       <button onClick={() => handleScroll("project")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Projects</button>
                       <button onClick={() => handleScroll("contact")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Contact</button>
@@ -81,10 +87,11 @@ function App() {
               </>
             }
 
-            <div className='hide_flex_element flex justify-between   w-[48%] text-lg font-semibold'>
-                <button  onClick={() => handleScroll("home")} class="px-4 py-1 bg-white text-black rounded-lg font-bold">Home</button>
+            <div className='hide_flex_element flex justify-between   w-[58%] text-lg font-semibold'>
+                <button  onClick={() => handleScroll("home")} className="px-4 py-1 bg-white text-black rounded-lg font-bold">Home</button>
                 <button onClick={() => handleScroll("about")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>About</button>
                 <button onClick={() => handleScroll("skills")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Skills</button>
+                <button onClick={() => handleScroll("experience")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Experience</button>
                 <button onClick={() => handleScroll("education")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Education</button>
                 <button onClick={() => handleScroll("project")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Projects</button>
                 <button onClick={() => handleScroll("contact")}  className='px-4 py-1 hover:bg-white hover:text-black rounded-lg '>Contact</button>
@@ -94,16 +101,16 @@ function App() {
 
       {/*Section  */}
 
-      <div className="mt-[60px]  mb-12" >
+      <div className="mt-[60px] " >
 
           {/* Hero section  */}
-          <div id="home" className='bg-gradient-to-br  from-[#4e3a6e] to-[#836ab6] lg:h-[700px] h-[370px] lg:pb-0 pb-10 text-white flex items-center justify-center '>
+          <div id="home" className='bg-gradient-to-br  from-[#4e3a6e] to-[#836ab6] h-[700px]  lg:pb-0 pb-10 text-white flex items-center justify-center '>
               
-              <div className="flex lg:flex-row flex-col lg:justify-between items-center lg:w-[85%]">
+              <div className="flex lg:flex-row flex-col-reverse lg:justify-between items-center lg:w-[85%]">
 
                 <div className='lg:w-[50%] lg:px-0 px-4 lg:text-lg text-center flex flex-col lg:gap-4  text-white '>
                   
-                    <svg className="animateWelcome" xmlns="http://www.w3.org/2000/svg" id="welcome" class="max-sm:w-full" max-width="6.30667in" height="1.27333in" viewBox="0 0 1892 382" fill="white">
+                    <svg className="animateWelcome max-sm:w-full" xmlns="http://www.w3.org/2000/svg" id="welcome"  max-width="6.30667in" height="1.27333in" viewBox="0 0 1892 382" fill="white">
                       <path id="welcome_path" d="M 673.00,52.00
                     C 673.00,52.00 686.00,52.00 686.00,52.00
                       686.00,52.00 686.00,338.00 686.00,338.00
@@ -266,17 +273,34 @@ function App() {
                       1837.37,343.87 1826.37,323.44 1842.00,314.85 Z"></path>
                     </svg>
 
-                    <p className='lg:mt-4 animate-fadeIn text-shadow-glow'>Hi, I'm Satynarayan Maurya, a dedicated B.Tech student with a solid foundation in software development, full-stack web development, and database management.</p>
+                    <p className='lg:mt-2 animate-fadeIn text-shadow-glow'>Hi, I'm Satynarayan Maurya, a B.Tech graduate with a strong foundation in software development, full-stack web development, and database management.</p>
                     <p className="animate-fadeIn lg:mt-0 mt-3">I'm a full-stack web developer skilled in the MERN stack, creating dynamic and responsive applications. I'm passionate about developing efficient, user-centered solutions that solve real-world challenges.</p>
                    
                 </div>
 
                   {/* image  */}
                 <div className="hide_block_element">
-                  <img src={heroImage} alt=""  className="lg:w-[600px]"/>
+                  <img src={heroImage || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUq_A7O2XOAyjZ7HVykwsaLveiQzQktacOzg&s"} alt=""  className="lg:w-[600px]" />
                 </div>
+
+                <div className=" lg:hidden w-[280px] h-[280px] relative flex justify-center items-center overflow-hidden ">
+                  {/* Whole moving block (image + border) */}
+                  <div className="w-[260px] h-[260px] rounded-full border-4 border-white animate-floatAround">
+                    <img
+                      src={
+                        profileImage ||
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUq_A7O2XOAyjZ7HVykwsaLveiQzQktacOzg&s"
+                      }
+                      alt="Profile"
+                      className="w-full h-full object-cover rounded-full object-[0_15%]"
+                    />
+                  </div>
+                </div>
+
+
               </div>
           </div>
+
 
           {/* About  */}
           <div id="about" ref={ref} className="w-full mt-6">
@@ -308,67 +332,87 @@ function App() {
             </div>
           </div>
 
+
           {/* Skills  */}
-          <div id="skills" className="w-full mt-6">
+          <div id="skills" className="w-full mt-6 ">
             <div className="w-[97%] mx-auto shadow-xl border-t-[1px] bg-[#F5EFFF] rounded-lg">
 
               <div className="w-[80%] mx-auto pb-12">
 
                 <h1 className="text-center font-bold lg:text-5xl text-4xl lg:pt-12 pt-6 ">MY SKILLS</h1>
-                <div className="lg:mt-12 mt-6 flex justify-between flex-wrap lg:gap-12 gap-6">
-              
-                  {/* HTML & CSS 2  */}
-                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
-                      <h1 className="lg:text-3xl text-2xl font-bold">HTML & CSS</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">Experienced in HTML5 and CSS3, building responsive layouts and ensuring cross-browser compatibility.</p>
+                <div className="lg:mt-12 mt-6 flex justify-between flex-wrap lg:gap-6 gap-6">
+
+                  {/* React js 4  */}
+                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl  font-bold">REACT JS</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">React.js is a popular JavaScript library for building user interfaces, particularly single-page applications.</p>
                   </div>
-                  
-                  {/* Tailwind 2  */}
-                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
-                      <h1 className="lg:text-3xl text-2xl  font-bold">TAILWIND</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">Tailwind CSS is a utility-first CSS framework that provides low-level utility classes for building custom designs directly in HTML.</p>
+
+                  {/* Node js  5  */}
+                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl  font-bold">NODE JS</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">Node.js is a JavaScript runtime built on Chrome's V8 engine that allows developers to execute JavaScript on the server side.</p>
+                  </div>
+
+                  {/* Express js  5  */}
+                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl  font-bold">EXPRESS JS</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">This is a minimal and flexible web application framework for Node.js that simplifies the process of building server-side applications.</p>
+                  </div>
+
+                  {/* Mongo DB js  5  */}
+                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl  font-bold">MONGO DB</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">MongoDB is a NoSQL database that uses a flexible, document-oriented data model to store data in JSON-like format (BSON).</p>
                   </div>
 
                   {/* Java script 3  */}
-                  <div className={`${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"} hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 `}>
-                      <h1 className="lg:text-3xl text-2xl  font-bold">JAVA SCRIPT</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">Knowledgeable in JavaScript, including ES6+, DOM manipulation, and creating interactive web applications.</p>
+                  <div className={`${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"} hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black hidden  lg:flex flex-col items-center px-1 py-4 `}>
+                      <h1 className=" text-2xl  font-bold">JAVA SCRIPT</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">Knowledgeable in JavaScript, including ES6+, DOM manipulation, and creating interactive web applications.</p>
+                  </div>
+                  
+                  {/* Tailwind 2  */}
+                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black hidden  lg:flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl  font-bold">TAILWIND</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">Tailwind CSS is a utility-first CSS framework that provides low-level utility classes for building custom designs.</p>
+                  </div>
+                  
+                  {/* React Router Dom  */}
+                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black hidden lg:flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl  font-bold">REACT ROUTER</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2"> Built multi-page Single Page Applications using React Router. Used dynamic routing, nested routes, and protected routes.</p>
+                  </div>
+                  
+                  {/* Framer Motion  */}
+                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl  font-bold">FRAMER MOTION</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">Proficient in Framer Motion for implementing smooth animations, transitions,scroll effects, and interactive UI enhancements.</p>
                   </div>
 
-                  {/* React js 4  */}
-                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
-                      <h1 className="lg:text-3xl text-2xl  font-bold">REACT JS</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">React.js is a popular JavaScript library for building user interfaces, particularly single-page applications.</p>
+                  {/* JWT 2  */}
+                  <div className={`hidden  hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black lg:flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl  font-bold">JWT & COOKIES</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">Implemented secure authentication using JWT tokens stored in cookies with options like httpOnly, secure, and sameSite.</p>
                   </div>
 
-                  {/* Node js  5  */}
-                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
-                      <h1 className="lg:text-3xl text-2xl  font-bold">NODE JS</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">Node.js is a JavaScript runtime built on Chrome's V8 engine that allows developers to execute JavaScript on the server side.</p>
-                  </div>
-
-                  {/* Node js  5  */}
-                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
-                      <h1 className="lg:text-3xl text-2xl  font-bold">EXPRESS JS</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">This is a minimal and flexible web application framework for Node.js that simplifies the process of building server-side applications.</p>
-                  </div>
-
-                  {/* Node js  5  */}
-                  <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
-                      <h1 className="lg:text-3xl text-2xl  font-bold">MONGO DB</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">MongoDB is a NoSQL database that uses a flexible, document-oriented data model to store data in JSON-like format (BSON).</p>
+              
+                  {/* HTML & CSS 2  */}
+                  <div className={`hidden hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black lg:flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl font-bold">HTML & CSS</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">Experienced in HTML5 and CSS3, building responsive layouts and ensuring cross-browser compatibility.</p>
                   </div>
 
                     {/* C/C++ 1  */}
-                    <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
-                      <h1 className="lg:text-3xl text-2xl font-bold">C/C++</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">Proficient in C and C++, with a strong understanding of data structures, algorithms, and system-level programming.</p>
+                    <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl font-bold">C/C++</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">Proficient in C and C++, with a strong understanding of data structures, algorithms, and system-level programming.</p>
                   </div>
 
                     {/* Pyhton 1  */}
-                    <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[300px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black flex flex-col items-center px-1 py-5 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
-                      <h1 className="lg:text-3xl text-2xl font-bold">PYTHON</h1>
-                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-4">Solid foundation in Python, with experience in data analysis, scripting, and web development.</p>
+                    <div className={`hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-gradient-to-tr from-[#C0EBA6] to-[#FCCd2A]  w-[270px] h-[200px] bg-[#FFFBE6] rounded-3xl border border-black hidden  lg:flex flex-col items-center px-1 py-4 ${isVisible ? "animate-fadeIn" : "opacity-0 translate-y-10"}`}>
+                      <h1 className=" text-2xl font-bold">PYTHON</h1>
+                      <p className="w-[85%] text-[1em] text-[#555] leading-relaxed text-center mt-2">Solid foundation in Python, with experience in data analysis, scripting, and web development.</p>
                   </div>
                   
                 </div>
@@ -377,8 +421,20 @@ function App() {
             </div>
           </div>
 
+
+          {/* Experience  */}
+          <div id="experience" className="w-full mt-6 ">
+            <div className="w-[97%] mx-auto shadow-xl border-t-[1px] bg-[#F5EFFF] rounded-lg">
+              <div className="lg:w-[80%] w-[95%] mx-auto pb-12">
+
+              <Experience/>
+              </div>
+            </div>
+          </div>
+
+
           {/* Education  */}
-          <div id="education" className="w-full mt-6">
+          <div id="education" className="w-full mt-6 ">
             <div className="w-[97%] mx-auto shadow-xl border-t-[1px] bg-[#F5EFFF] rounded-lg">
 
               <div className="lg:w-[80%] w-[95%] mx-auto pb-12">
@@ -419,114 +475,15 @@ function App() {
             </div>
           </div>
 
+
           {/* Projects  */}
-          <div id="project" className="w-full mt-6">
-            <div className="w-[97%] mx-auto shadow-xl border-t-[1px] bg-[#F5EFFF] rounded-lg">
-
-              <div className="lg:w-[80%] w-[95%] mx-auto pb-12">
-
-                <h1 className="text-center font-bold  lg:text-5xl text-4xl lg:pt-10 pt-6 ">MY PROJECTS</h1>
-                <div className="lg:mt-12 mt-8 flex gap-10 justify-between flex-wrap ">
-
-                  {/* Study Notion  */}
-                  <div className="w-[520px]  hover:bg-gradient-to-tr hover:from-[#b0fafb] hover:to-[#FCCd2A]   lg:h-[500px] bg-gradient-to-tr from-[#C0EBA6] to-[#FFEBB6] px-4 py-4 flex flex-col gap-3 rounded-xl hover:scale-105 transition-all duration-200">
-                        <h1 className="text-3xl font-bold">Study Notion: E-Learning Platform</h1>
-                        <p>Study Notion is a comprehensive e-learning platform designed to connect instructors and students seamlessly. The platform provides a user-friendly interface for students to enroll in courses and for instructors to create and manage their courses. Engage with video lectures, quizzes, assignments to reinforce your knowledge.</p>
-
-                        <div className="flex flex-col gap-2">
-                          <h3 className="text-lg font-semibold">Key features:-</h3>
-                          <ul className="ml-8 list-disc flex flex-col gap-1">
-                            <li> <span className="font-semibold">Student Features:</span> Purchase course via Razorpay and access chapter wise content in an enrolled section.</li>
-                            <li> <span className="font-semibold">Instructor Features:</span> Create and manage courses, sections, and subsections, and track enrollments.</li>
-                            <li> <span className="font-semibold">Authentication:</span> Secure email OTP based login and logout functionality. </li>
-                            <li> <span className="font-semibold">Tech Stacks:</span> React.js, Node.js, Express.js, MongoDB.</li>
-                          </ul>
-                        </div>
-
-                        <div className="flex justify-between mt-3 mx-2">
-                          <a href="https://study-notion-frontend-satynarayan-mauryas-projects.vercel.app/" target="_blank"  rel="noopener noreferrer" className="bg-white text-black font-semibold px-4 py-1 rounded-lg">View Project</a>
-                          <a href="https://github.com/SatynarayanMaurya/Study-Notion"  rel="noopener noreferrer" target="_blank" className="bg-white text-black font-semibold px-4 py-1 rounded-lg">View Github</a>
-                        </div>
-                  </div>
-
-                  {/* E-Commerce  */}
-                  <div className="w-[520px]   hover:bg-gradient-to-tr hover:from-[#b0fafb] hover:to-[#FCCd2A]   lg:h-[500px]  bg-gradient-to-tr from-[#C0EBA6] to-[#FFEBB6] px-4 py-4 flex flex-col gap-3 rounded-xl hover:scale-105 transition-all duration-200">
-                        <h1 className="text-3xl font-bold">Shop Next: E-Commerce Platform</h1>
-                        <p>ShopNext is a modern e-commerce platform designed to provide a seamless shopping experience for users. On ShopNext, users can browse a wide variety of products across different categories, all available for viewing without needing to sign up.</p>
-
-                        <div className="flex flex-col gap-2">
-                          <h3 className="text-lg font-semibold">Key features:-</h3>
-                          <ul className="ml-8 list-disc flex flex-col gap-1">
-                            <li> <span className="font-semibold">Normal User: </span> Browse products without login, add items to the cart, and place orders after logging in. Manage orders in the ”My Orders” section.</li>
-                            <li> <span className="font-semibold">Admin Features:</span> Add, update, or delete products and track user orders.</li>
-                            <li> <span className="font-semibold">Authentication:</span> Secure email-based login and logout functionality.</li>
-                            <li> <span className="font-semibold">Tech Stacks:</span> React.js, Node.js, Express.js, MongoDB.</li>
-                          </ul>
-                        </div>
-
-                        <div className="flex justify-between mt-3 mx-2">
-                          <a href="https://e-commerce-frontend-green-ten.vercel.app/" target="_blank"  rel="noopener noreferrer" className="bg-white text-black font-semibold px-4 py-1 rounded-lg">View Project</a>
-                          <a href="https://github.com/SatynarayanMaurya/E-commerce" target="_blank" rel="noopener noreferrer" className="bg-white text-black font-semibold px-4 py-1 rounded-lg">View Github</a>
-                        </div>
-                  </div>
-
-                  {/* Social Media  */}
-                  <div className="w-[520px]  hover:bg-gradient-to-tr hover:from-[#b0fafb] hover:to-[#FCCd2A]   lg:h-[500px]  bg-gradient-to-tr from-[#C0EBA6] to-[#FFEBB6] px-4 py-4 flex flex-col gap-3 rounded-xl hover:scale-105 transition-all duration-200">
-                        <h1 className="text-2xl font-bold">Frame Hub: Social Media Platform</h1>
-                        <p>FrameHub is a dynamic social media platform inspired by Instagram, designed to provide users with an engaging and visually-rich experience. FrameHub allows users to share, discover, and interact with captivating images and videos, all in one place. </p>
-
-                        <div className="flex flex-col gap-2">
-                          <h3 className="text-lg font-semibold">Key features:-</h3>
-                          <ul className="ml-8 list-disc flex flex-col gap-1">
-                            <li> <span className="font-semibold">FrameHub: </span> A social media platform for sharing posts and reels with interactive features.</li>
-                            <li className="font-semibold">User Authentication: </li>
-                            <li className="ml-10">Sign up, log in, and explore content from other users</li>
-                            <li className="ml-10">Like, comment, and follow other profiles.</li>
-                            <li className="ml-10">View and edit own profile, post and share reels/photos.</li>
-                            <li className="ml-10">Scroll through an engaging feed of posts and reels.</li>
-                            <li> <span className="font-semibold">Explore Section: </span> Browse all posts and visit user profiles.</li>
-                          </ul>
-                        </div>
-
-                        <div className="flex justify-between mt-3">
-                          <a href="https://instagram-umber-psi.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-black font-semibold px-4 py-1 rounded-lg">View Project</a>
-                          <a href="https://github.com/SatynarayanMaurya/instagram" target="_blank" rel="noopener noreferrer" className="bg-white text-black font-semibold px-4 py-1 rounded-lg">View Github</a>
-                        </div>
-                  </div>
-
-                  {/* Todo app  */}
-                  <div className="w-[520px]   hover:bg-gradient-to-tr hover:from-[#b0fafb] hover:to-[#FCCd2A]   lg:h-[500px]  bg-gradient-to-tr from-[#C0EBA6] to-[#FFEBB6] px-4 py-4 flex flex-col gap-3 rounded-xl hover:scale-105 transition-all duration-200">
-                        <h1 className="text-2xl font-bold">TODO Lists:</h1>
-                        <p>This Todo List application is a full-stack MERN project designed to provide users with a seamless, intuitive platform for managing their tasks. With a focus on user authentication and data persistence</p>
-
-                        <div className="flex flex-col gap-2">
-                          <h3 className="text-lg font-semibold">Key features:-</h3>
-                          <ul className="ml-8 list-disc flex flex-col gap-1">
-                            <li> <span className="font-semibold">User Authentication:</span> Users must sign up or log in before they can create, edit, delete, or mark tasks.</li>
-                            <li> <span className="font-semibold">Task Management:</span> Users can easily create, update, delete, and mark tasks as completed within the app.</li>
-                            <li> <span className="font-semibold">Persistent Data:</span> All tasks are securely stored in the database, ensuring that users can access their to-dos even after logging out and returning later.</li>
-                            <li> <span className="font-semibold">Real-Time Updates:</span> Any changes made to the tasks are immediately reflected in the database.</li>
-                          </ul>
-                        </div>
-
-                        <div className="flex justify-between mt-3">
-                          <a href="https://to-do-list-frontend-zjhn.onrender.com/" target="_blank" rel="noopener noreferrer" className="bg-white text-black font-semibold px-4 py-1 rounded-lg">View Project</a>
-                          <a href="https://github.com/SatynarayanMaurya/TO-DO-List" target="_blank" rel="noopener noreferrer" className="bg-white text-black font-semibold px-4 py-1 rounded-lg">View Github</a>
-                          {/* <button>View Github</button> */}
-                        </div>
-                  </div>
-
-                  
-                </div>
-
-              </div>
-
-            </div>
+          <div id="project" className="my-6">
+            <Projects/>
           </div>
 
           
           {/* Contact  */}
-          <div id="contact" className="w-full mt-6">
+          <div id="contact" className="w-full mt-6 ">
             <div className="w-[97%] mx-auto shadow-xl border-t-[1px] bg-[#F5EFFF] rounded-lg">
 
               <div className="lg:w-[80%] w-[95%] mx-auto pb-12">
@@ -536,7 +493,7 @@ function App() {
                 <div className="lg:mt-12 mt-8 flex lg:flex-row flex-col justify-between gap-10">
 
                   {/* left side  */}
-                  <div className="bg-[#E4E0E1] py-5 px-8 rounded-xl text-center max-w-[500px] max-h-[450px]">
+                  <div className="bg-[#E4E0E1] py-4 px-8 rounded-xl text-center max-w-[500px] max-h-[450px]">
                     <h1 className="text-xl font-bold">Get in Touch</h1>
                     <p className="my-5">If you have any questions or comments, feel free to reach out!</p>
 
@@ -545,7 +502,7 @@ function App() {
 
                         <div className="flex flex-col gap-4">
                           <div className="flex items-center justify-center gap-1">
-                            <div className="flex items-center font-semibold hide_block_element">
+                            <div className="flex items-center ">
                               <p className="text-2xl"><MdEmail/></p>
                               <p className="text-lg">Email :</p>
                             </div>
@@ -557,7 +514,7 @@ function App() {
                               <p className="text-xl"><BsFillTelephoneFill/></p>
                               <p className="text-lg">Phone :</p>
                             </div>
-                            <a href="tel:+1234567890" className="hover:text-[#d470ff] transition-all duration-200 text-lg">+91 89615-26015</a>
+                            <a href="tel:+1234567890" className="hover:text-[#d470ff] transition-all duration-200 text-lg">+91 9919564763</a>
                           </div>
 
                           <div className="flex items-center justify-center gap-1  font-semibold ">
@@ -575,13 +532,21 @@ function App() {
                             </div>
                             <a href="https://github.com/SatynarayanMaurya" target="_blank" rel="noopener noreferrer" className="hover:text-[#d470ff] transition-all duration-200 text-lg">@Satynarayan-Maurya</a>
                           </div>
+
+                          <div className="flex items-center justify-center gap-1  font-semibold ">
+                            <div className="flex items-center gap-1">
+                              <p className="text-xl"><IoLogoInstagram/></p>
+                              <p className="text-lg">:</p>
+                            </div>
+                            <a href="https://www.instagram.com/satynarayanmaurya989?igsh=MWxnMDV1bHRrYXB3bQ==" target="_blank" rel="noopener noreferrer" className="hover:text-[#d470ff] transition-all duration-200 text-lg">Satynarayan maurya</a>
+                          </div>
                         </div>
 
                     </div>
                   </div>                    
 
                   {/* Right side  */}
-                  <div className="bg-[#9B7EBD] py-5 pb-10 px-8 rounded-xl text-center max-w-[500px] max-h-[450px]">
+                  <div className="bg-[#9B7EBD] py-4 pb-10 px-8 rounded-xl text-center lg:w-[500px] w-[90vw] max-h-[450px]">
                     <h1 className="text-xl font-bold text-[#2E073F]">Contact Form </h1>
 
                     <form action="" className="flex flex-col gap-4 mt-6 w-full">
@@ -607,6 +572,13 @@ function App() {
 
             </div>
           </div>
+
+          {/* Projects  */}
+          <div id="footer">
+            <Footer/>
+          </div>
+
+
 
 
 
