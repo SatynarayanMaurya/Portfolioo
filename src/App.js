@@ -501,7 +501,7 @@ function App() {
                         <h1 className="text-xl font-bold">Contact Information</h1>
 
                         <div className="flex flex-col gap-4">
-                          <div className="flex items-center justify-center gap-1">
+                          <div className="flex lg:flex-row flex-col items-center justify-center gap-1">
                             <div className="flex items-center ">
                               <p className="text-2xl"><MdEmail/></p>
                               <p className="text-lg">Email :</p>
