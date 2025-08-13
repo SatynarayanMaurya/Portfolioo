@@ -10,18 +10,18 @@ function Experience() {
         "Started as a MERN stack development intern and was extended into a probation period due to strong performance. Contributed to core features of the company's travel platform, handled front-end and back-end tasks, integrated APIs, and resolved real-time production bugs.",
     },
     {
+        role: "Solo Developer",
+        company: "WhatsApp Web Clone",
+        duration: "Aug 2025 – Aug 2025",
+        description:
+        "WhatsApp Web Clone is a real-time chat application that replicates the core features and user interface of WhatsApp Web. The project allows users to send and receive instant messages, and update statuses in a responsive, web-based environment. ",
+    },
+    {
         role: "Full Stack Developer (Academic Project)",
         company: "Smart Invoice",
         duration: "Apr 2025 – Jun 2025",
         description:
         "Built a MERN stack application to generate, manage, and share digital invoices. Designed the backend logic, and developed a secure user authentication flow.",
-    },
-    {
-        role: "Solo Developer",
-        company: "ShopNext",
-        duration: "Oct 2024 – Nov 2024",
-        description:
-        "Developed a full-fledged e-commerce platform using MERN stack. Implemented cart, authentication, protected routes, and responsive UI with filtering and pagination features.",
     },
     {
       role: "Frontend Developer (Intern)",
@@ -42,7 +42,7 @@ function Experience() {
             className="bg-white border border-gray-300 shadow-md rounded-xl p-6 hover:shadow-xl transition-all duration-300"
           >
             <h2 className="text-xl font-semibold">{exp.role}</h2>
-            <p className="text-sm text-gray-600">{exp.company}</p>
+            <p className="text-sm text-gray-600 font-semibold">{exp.company}</p>
             <p className="text-sm text-gray-500 mb-2">{exp.duration}</p>
             <p className="text-[15px] text-gray-700">{exp.description}</p>
           </div>

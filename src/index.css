@@ -16,6 +16,10 @@ code {
 @tailwind utilities;
 
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}
+
 #welcome {
   stroke-width: 4;
   fill: white;

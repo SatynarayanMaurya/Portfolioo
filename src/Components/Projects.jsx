@@ -5,6 +5,7 @@ import framehub from "../Assests/framehub.png"
 import studyNotion from "../Assests/studyNotion.png"
 import shopNext from "../Assests/shopnext.png"
 import taskAgent from "../Assests/taskagent.png"
+import whatsapp from "../Assests/whatsapp.png"
 function Projects() {
 
     const [tripBlueprintOpen,setTripBlueprintOpen] = useState(false)
@@ -90,6 +91,26 @@ function Projects() {
 
                 <h1 className="text-center font-bold  lg:text-5xl text-4xl lg:pt-10 pt-6 ">MY PROJECTS</h1>
                 <div className="lg:mt-12 mt-8 flex gap-10 justify-between flex-wrap ">
+
+                    {/* Whatsapp Web  */}
+                    <div  className='lg:w-[30%]  p-4 border shadow-lg   rounded-lg'>
+                        <div>
+                            <img src={whatsapp} alt="" className=' h-[14rem] object-cover rounded-lg' />
+                        </div>
+                        <div >
+                            <div className='flex justify-between items-center my-3'>
+                                <h2 className='text-xl font-semibold'>WhatsApp Web </h2>
+                                <div className='flex gap-2'>
+
+                                    <a href='https://github.com/SatynarayanMaurya/WhatsApp-Web' target='_blank' className='border px-4 py-1 rounded-lg bg-blue-400 font-semibold text-white'>Github</a>
+                                    <a href='https://whats-app-web-nu.vercel.app/' target='_blank' className='border px-4 py-1 rounded-lg bg-blue-400 font-semibold text-white'>View</a>
+                                </div>
+                            </div>
+                            <div className='text-sm text-justify  h-[6.5rem] overflow-scroll hide-scrollbar'>
+                                WhatsApp Web Clone is a real-time chat application that replicates the core features and user interface of WhatsApp Web. The project allows users to send and receive instant messages,  and update statuses in a responsive, web-based environment. It is built using the MERN stack with Socket.IO for real-time communication.
+                            </div>
+                        </div>
+                    </div>
 
                     {/* Trip Blue print  */}
                     <div  className='lg:w-[30%]  p-4 border shadow-lg   rounded-lg'>
@@ -271,7 +292,7 @@ function Projects() {
                     </div>
 
                     {/* Task Agent  */}
-                    <div  className='lg:w-[30%] p-4 border shadow-lg   rounded-lg'>
+                    {/* <div  className='lg:w-[30%] p-4 border shadow-lg   rounded-lg'>
                         <div>
                             <img src={taskAgent} alt="" className='w-full h-[14rem] object-contain rounded-lg' />
                         </div>
@@ -284,7 +305,7 @@ function Projects() {
                                Task Agent is a task management web app where the admin can log in, add agents, and upload tasks via CSV. Uploaded tasks are automatically and equally distributed among agents, and the admin can view agent with task.
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
 
 
