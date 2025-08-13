@@ -28,7 +28,7 @@ function Experience() {
       company: "Octanet Pvt. Ltd.",
       duration: "July 2023 - August 2023",
       description:
-        "Worked on backend logic using Node.js and Express, collaborated on invoice automation features for internal tools, and ensured smooth integration with MongoDB.",
+        "During my internship \ I developed responsive and user-friendly web interfaces using React.js and Tailwind CSS. I implemented dynamic UI components, optimized rendering performance, and ensured cross-browser compatibility. ",
     },
   ];
 
