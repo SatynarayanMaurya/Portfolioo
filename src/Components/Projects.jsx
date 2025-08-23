@@ -103,7 +103,7 @@ function Projects() {
                                 <div className='flex gap-2'>
 
                                     <a href='https://github.com/SatynarayanMaurya/WhatsApp-Web' target='_blank' className='border px-4 py-1 rounded-lg bg-blue-400 font-semibold text-white'>Github</a>
-                                    <a href='https://whats-app-web-nu.vercel.app/' target='_blank' className='border px-4 py-1 rounded-lg bg-blue-400 font-semibold text-white'>View</a>
+                                    <a href='https://whats-app-web-git-main-satynarayan-mauryas-projects.vercel.app/' target='_blank' className='border px-4 py-1 rounded-lg bg-blue-400 font-semibold text-white'>View</a>
                                 </div>
                             </div>
                             <div className='text-sm text-justify  h-[6.5rem] overflow-scroll hide-scrollbar'>
